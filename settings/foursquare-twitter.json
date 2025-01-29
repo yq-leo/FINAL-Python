@@ -1,0 +1,7 @@
+{
+  "g1": "foursquare",
+  "g2": "twitter",
+  "alpha": 0.5,
+  "maxiter": 30,
+  "tol": 1e-4
+}

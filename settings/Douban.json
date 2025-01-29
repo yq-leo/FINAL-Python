@@ -1,0 +1,7 @@
+{
+  "g1": "online",
+  "g2": "offline",
+  "alpha": 0.82,
+  "maxiter": 30,
+  "tol": 1e-4
+}

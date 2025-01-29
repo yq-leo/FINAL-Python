@@ -1,0 +1,7 @@
+{
+  "g1": "flickr",
+  "g2": "lastfm",
+  "alpha": 0.4,
+  "maxiter": 30,
+  "tol": 1e-4
+}

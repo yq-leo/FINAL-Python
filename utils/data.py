@@ -58,12 +58,33 @@ def load_dataset_to_torch(name, g1, g2):
     # Load the prior alignment matrix
     H = torch.from_numpy(data['H'].toarray()) if not isinstance(data['H'], np.ndarray) else torch.from_numpy(data['H'])
 
-    return n1, n2, adj1, adj2, node_attr1, node_attr2, edge_attr1, edge_attr2, gnd, H
+    dataset = dict()
+    dataset['n1'] = n1
+    dataset['n2'] = n2
+    dataset['adj1'] = adj1
+    dataset['adj2'] = adj2
+    dataset['node_attr1'] = node_attr1
+    dataset['node_attr2'] = node_attr2
+    dataset['edge_attr1'] = edge_attr1
+    dataset['edge_attr2'] = edge_attr2
+    dataset['gnd'] = gnd
+    dataset['H'] = H
+
+    return dataset
 
 
-def display_dataset(name, g1, g2):
-    n1, n2, adj1, adj2, node_attr1, node_attr2, edge_attr1, edge_attr2, gnd, H = load_dataset_to_torch(name, g1, g2)
-    print(f'{name}:')
+def display_dataset(dataset):
+    n1 = dataset['n1']
+    n2 = dataset['n2']
+    adj1 = dataset['adj1']
+    adj2 = dataset['adj2']
+    node_attr1 = dataset['node_attr1']
+    node_attr2 = dataset['node_attr2']
+    edge_attr1 = dataset['edge_attr1']
+    edge_attr2 = dataset['edge_attr2']
+    gnd = dataset['gnd']
+    H = dataset['H']
+
     print(f'  n1: {n1}')
     print(f'  n2: {n2}')
     print(f'  adj1: {adj1.size()}')
