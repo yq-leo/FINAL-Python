@@ -19,6 +19,10 @@ if __name__ == "__main__":
     maxiter = settings['maxiter']
     tol = settings['tol']
     s = final(data, alpha, maxiter, tol)
+
+    print('Greedy matching...', end=' ')
+    start = time.time()
     m = greedy_match(s)
+    print('Done in {:.2f}s'.format(time.time() - start))
     acc = compute_accuracy(m, data['gnd'])
     print('Accuracy: {:.2f}%'.format(acc * 100))
