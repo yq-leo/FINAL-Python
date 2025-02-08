@@ -36,7 +36,7 @@ cd FINAL-Python
 pip install -r requirements.txt
 ```
 
-4. To run PARROT, execute the following command in the terminal:
+4. To run FINAL, execute the following command in the terminal:
 ```sh
 python main.py --dataset={dataset}
 ```
