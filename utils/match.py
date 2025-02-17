@@ -49,7 +49,7 @@ def compute_accuracy(M, gnd):
     matched_pairs = torch.stack((col, row), dim=1)
 
     matched_pairs = matched_pairs.to(torch.int64)
-    gnd = gnd.to(torch.int64) - 1
+    gnd = gnd.to(torch.int64)
 
     intersection = torch.sum((matched_pairs[:, None] == gnd).all(dim=2).any(dim=1))
     acc = intersection.item() / gnd.shape[0]

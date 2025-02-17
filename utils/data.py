@@ -67,7 +67,7 @@ def load_dataset_to_torch(name, g1, g2):
     dataset['node_attr2'] = node_attr2
     dataset['edge_attr1'] = edge_attr1
     dataset['edge_attr2'] = edge_attr2
-    dataset['gnd'] = gnd
+    dataset['gnd'] = gnd - 1
     dataset['H'] = H
 
     return dataset
